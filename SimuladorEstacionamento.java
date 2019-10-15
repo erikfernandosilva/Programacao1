@@ -105,6 +105,7 @@ public class SimuladorEstacionamento {
                      if (!encontrou){
                          System.out.println("Placa não encontrada!");
                      }
+                     break;
                  }
                   case 5 : {
                      String placaRetirar = "";
@@ -123,9 +124,11 @@ public class SimuladorEstacionamento {
                       if (!retirou){
                           System.out.println("Não há carro com esta placa!");
                       }
+                      break;
                  }
                  case 6 : {
                      System.out.println ("Total Arrecadado: " + totalArrecadado);
+                     break;
                  }
              }
          }
