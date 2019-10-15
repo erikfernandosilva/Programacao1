@@ -106,13 +106,29 @@ public class SimuladorEstacionamento {
                          System.out.println("Placa não encontrada!");
                      }
                  }
-                 case 5 : {
-                 
+                  case 5 : {
+                     String placaRetirar = "";
+                     System.out.println("Informe placa para retirar:");
+                     placaRetirar = leia.next();
+                     boolean retirou = false;
+                      for (int linha = 0; linha <=3; linha++){
+                         for (int coluna =0; coluna <= 3; coluna++){
+                            if (estacionamento[linha][coluna].equals(placaRetirar)){
+                                estacionamento[linha][coluna] = " ";
+                                retirou = true;
+                                totalArrecadado += 10;
+                            }
+                         }
+                      }
+                      if (!retirou){
+                          System.out.println("Não há carro com esta placa!");
+                      }
                  }
                  case 6 : {
-                  
+                     System.out.println ("Total Arrecadado: " + totalArrecadado);
                  }
              }
          }
     }
 }
+
